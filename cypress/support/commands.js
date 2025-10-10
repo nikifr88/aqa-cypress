@@ -23,3 +23,31 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.overwrite('type', (originalFn, element, text, options) => {
+  if (options && options.sensitive) {
+    options.log = false
+    Cypress.log({
+      $el: element,
+      name: 'type',
+      message: '*'.repeat(text.length),
+    })
+  }
+
+  return originalFn(element, text, options)
+})
+
+Cypress.Commands.add('openRegisterModal', () => {
+    cy.get('.header_signin').click();
+    cy.get('.modal-footer > .btn.btn-link').click();
+})
+
+Cypress.Commands.add('login', (email, pass) => {
+    cy.get('.header_signin').click();
+
+    cy.get('#signinEmail').type(email);
+    cy.get('#signinPassword').type(pass, { sensitive: true });
+
+    cy.get('.modal-footer > .btn.btn-primary').click();
+
+    cy.url({timeout: 1500}).should('eq', 'https://qauto.forstudy.space/panel/garage')
+})
