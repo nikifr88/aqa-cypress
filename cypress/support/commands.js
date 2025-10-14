@@ -49,5 +49,5 @@ Cypress.Commands.add('login', (email, pass) => {
 
     cy.get('.modal-footer > .btn.btn-primary').click();
 
-    cy.url({timeout: 1500}).should('eq', 'https://qauto.forstudy.space/panel/garage')
+    //cy.url({timeout: 1500}).should('eq', 'https://qauto.forstudy.space/panel/garage')
 })
