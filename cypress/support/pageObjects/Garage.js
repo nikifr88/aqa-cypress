@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-class Garage {
+export default class Garage {
     get addCarButton() {
         return cy.get('.panel-page_heading > .btn')
     }
@@ -66,7 +66,32 @@ class Garage {
         this.choseBrandSelect.select(brand)
         this.choseModelSelect.select(model)
         this.mileageInput.type(mileage)
+
+        cy.intercept('POST', '/api/cars').as('carCreateReq');
+
         this.createCarButton.click()
+
+        cy.wait('@carCreateReq').then((interception) => {
+            Cypress.env('carId', interception.response.body.data.id);
+
+            expect(interception.response.statusCode).to.eq(201);
+        })
+    }
+
+    checkCreatedCarAPI(brand = 'BMW', model = 'X5', mileage = 1){
+        cy.request({
+            url: `api/cars/${Cypress.env('carId')}`,
+            method: 'GET',
+            headers: {
+                Cookie: `sid=${Cypress.env('sid')}`
+            }
+        }).then(response => {
+            expect(response.status).to.eq(200);
+            expect(response.body.data.id).to.eq(Cypress.env('carId'));
+            expect(response.body.data.brand).to.eq(brand);
+            expect(response.body.data.model).to.eq(model);
+            expect(response.body.data.initialMileage).to.eq(mileage);
+        })
     }
 
     updateMileage(mileage = 2) {
@@ -90,5 +115,3 @@ class Garage {
         this.approveRemoveCarButton.click()
     }
 }
-
-export default new Garage;

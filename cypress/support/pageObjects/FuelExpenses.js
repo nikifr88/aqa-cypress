@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-class FuelExpenses {
+export default class FuelExpenses {
     get carSelectDropdown() {
         return cy.get('#carSelectDropdown')
     }
@@ -53,14 +53,18 @@ class FuelExpenses {
         return cy.get('.btn.btn-edit')
     }
 
-    get currDate() {
+    get currDateUI() {
         return new Date().toLocaleDateString('ru-RU').replace(/\//g, '.');
+    }
+
+    get currDateAPI() {
+        return new Date().toISOString().slice(0, 10);
     }
 
     addExpense(vehicle = 0, mileage = 60, numOfLiters = 10, cost = 10){
         this.addAnExpenseButton.click()
         this.vehicleSelect.select(vehicle)
-        this.reportExpenseDateInput.clear().type(this.currDate)
+        this.reportExpenseDateInput.clear().type(this.currDateUI)
         this.expenseMileageInput.clear().type(mileage)
         this.expenseLitersInput.clear().type(numOfLiters)
         this.totalCostInput.clear().type(cost)
@@ -70,7 +74,7 @@ class FuelExpenses {
     editExpense(vehicle = 0, mileage = 70, numOfLiters = 15, cost = 15){
         this.editExpenseButton.first().click({force: true})
         this.vehicleSelect.select(vehicle)
-        this.reportExpenseDateInput.clear().type(this.currDate)
+        this.reportExpenseDateInput.clear().type(this.currDateUI)
         this.expenseMileageInput.clear().type(mileage)
         this.expenseLitersInput.clear().type(numOfLiters)
         this.totalCostInput.clear().type(cost)
@@ -79,8 +83,6 @@ class FuelExpenses {
 
     removeExpense(){
         this.deleteExpenseButton.first().click({force: true});
-        this.approveDeleteButton.click()
+        this.approveDeleteButton.first().click()
     }
 }
-
-export default new FuelExpenses;
