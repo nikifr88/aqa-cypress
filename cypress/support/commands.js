@@ -49,5 +49,32 @@ Cypress.Commands.add('login', (email, pass) => {
 
     cy.get('.modal-footer > .btn.btn-primary').click();
 
-    //cy.url({timeout: 1500}).should('eq', 'https://qauto.forstudy.space/panel/garage')
+    cy.wait(1000)
+    cy.getCookie('sid').then(sid => {
+      Cypress.env('sid', sid.value)
+    })
+})
+
+Cypress.Commands.add('createExpenseAPI', (
+  reportedAt, 
+  mileage, 
+  liters, 
+  totalCost, 
+  forceMileage
+) => {
+    cy.request({
+      url: `api/expenses`,
+      method: 'POST',
+      body: {
+        carId: Cypress.env('carId'),
+        reportedAt,
+        mileage,
+        liters,
+        totalCost,
+        forceMileage
+      },
+      headers: {
+          Cookie: `sid=${Cypress.env('sid')}`
+      }
+    })
 })
