@@ -8,11 +8,13 @@
     "generate:report": "npx mochawesome-report-generator cypress/reports/mochawesome/report*.json -o cypress/reports/mochawesome/html",
     "test:report": "rm -rf cypress/reports/mochawesome/* && npm run cypress:run -- --headless --env configFile=qauto --spec 'cypress/e2e/qauto/pages/**/*.cy.js' && npm run generate:report",
     "cypress:qauto": "npx cypress open --env configFile=qauto",
-    "cypress:qauto2": "npx cypress open --env configFile=qauto2"
+    "cypress:qauto2": "npx cypress open --env configFile=qauto2 --spec 'cypress/e2e/qauto/pages/**/*.cy.js'",
+    "cypress:qautoFirefox": "npx cypress run --browser firefox --env configFile=qauto --spec 'cypress/e2e/qauto/pages/fuelExpenses.cy.js'"
   },
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "devDependencies": {
     "cypress": "^15.3.0",
     "mochawesome": "^2.0.5",
