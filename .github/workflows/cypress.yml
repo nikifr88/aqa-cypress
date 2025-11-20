@@ -1,0 +1,35 @@
+# .github/workflows/cypress.yml
+name: E2E Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t cypress-e2e .
+
+      - name: Run Cypress tests in Docker
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/e2e \
+            -w /e2e \
+            cypress-e2e
+
+      - name: Upload artifacts (видео + скриншоты)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/videos/
+            cypress/screenshots/
+          retention-days: 30
