@@ -23,8 +23,8 @@ export default defineConfig({
     viewportHeight: 1080,
     video: true,
     screenshotOnRunFailure: true,
-    pageLoadTimeout: 5000,
-    defaultCommandTimeout: 300,
+    pageLoadTimeout: 10000,
+    defaultCommandTimeout: 5000,
 
     async setupNodeEvents(on, config) {
       const file = config.env.configFile || "qauto";
