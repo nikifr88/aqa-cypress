@@ -63,6 +63,7 @@ export default class Garage {
 
     addCar(brand = 'BMW', model = 'X5', mileage = 1) {
         this.addCarButton.click()
+        cy.wait(3000)
         this.choseBrandSelect.select(brand)
         this.choseModelSelect.select(model)
         this.mileageInput.type(mileage)

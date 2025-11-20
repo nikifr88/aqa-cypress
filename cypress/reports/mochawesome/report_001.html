@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Mochawesome Report</title><link rel="stylesheet" href="assets/app.css"/></head><body data-raw="{
+  &quot;stats&quot;: {
+    &quot;suites&quot;: 1,
+    &quot;tests&quot;: 7,
+    &quot;passes&quot;: 0,
+    &quot;pending&quot;: 0,
+    &quot;failures&quot;: 7,
+    &quot;start&quot;: &quot;2025-11-20T07:06:43.084Z&quot;,
+    &quot;end&quot;: &quot;2025-11-20T07:08:41.867Z&quot;,
+    &quot;duration&quot;: 118783,
+    &quot;testsRegistered&quot;: 7,
+    &quot;passPercent&quot;: 0,
+    &quot;pendingPercent&quot;: 0,
+    &quot;other&quot;: 1,
+    &quot;hasOther&quot;: true,
+    &quot;skipped&quot;: 0,
+    &quot;hasSkipped&quot;: false,
+    &quot;passPercentClass&quot;: &quot;danger&quot;,
+    &quot;pendingPercentClass&quot;: &quot;danger&quot;
+  },
+  &quot;suites&quot;: {
+    &quot;title&quot;: &quot;&quot;,
+    &quot;suites&quot;: [
+      {
+        &quot;title&quot;: &quot;Check fuel expenses options&quot;,
+        &quot;suites&quot;: [],
+        &quot;tests&quot;: [
+          {
+            &quot;title&quot;: &quot;Create car and expense&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Create car and expense&quot;,
+            &quot;duration&quot;: 18853,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;cy.visit(&#x27;/panel/garage&#x27;);\ntGarage.addCar();\ncy.visit(expensesPage);\ntFuelExpenses.addExpense();\ntFuelExpenses.expenseTableTr.first().should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense added&#x27;);&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;CypressError: Timed out retrying after 5000ms: `cy.select()` failed because it could not find a single `&lt;option&gt;` with value, index, or text matching: `X5`\n\nhttps://on.cypress.io/select&quot;,
+              &quot;estack&quot;: &quot;CypressError: Timed out retrying after 5000ms: `cy.select()` failed because it could not find a single `&lt;option&gt;` with value, index, or text matching: `X5`\n\nhttps://on.cypress.io/select\nat getOptions (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:115525:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.try (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\nat retryOptions (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:115557:64)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.try (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\nat whenStable (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:147260:62)\nat __webpack_modules__&lt;/create/retry (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:147201:14)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._fulfill (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1615:18)\nat __webpack_modules__&lt;/module.exports/Promise.delay/handle&lt; (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at addCar (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:67:30)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:27:16)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;dc98c829-76e6-40e2-97b5-97ed131972ca&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Check created car&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Check created car&quot;,
+            &quot;duration&quot;: 12435,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;tGarage.checkCreatedCarAPI()&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\n\nThe response we received from your web server was:\n\n  &gt; 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:14 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;transfer-encoding\&quot;: \&quot;chunked\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;2c-khi8OqdMCOMLERZufgII8LfWbC0\\\&quot;\&quot;,\n  \&quot;content-encoding\&quot;: \&quot;gzip\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car not found\&quot;\n}\n\n\nhttps://on.cypress.io/request&quot;,
+              &quot;estack&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\n\nThe response we received from your web server was:\n\n  &gt; 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:14 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;transfer-encoding\&quot;: \&quot;chunked\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;2c-khi8OqdMCOMLERZufgII8LfWbC0\\\&quot;\&quot;,\n  \&quot;content-encoding\&quot;: \&quot;gzip\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car not found\&quot;\n}\n\n\nhttps://on.cypress.io/request\nat __webpack_modules__&lt;/__WEBPACK_DEFAULT_EXPORT__/request (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:136321:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat _drainQueueStep (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2377:12)\nat _drainQueue (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__&lt;/Async.prototype._drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__&lt;/Async/this.drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at checkCreatedCarAPI (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:82:11)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:35:42)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;909f9b35-ddc0-453d-8ea5-a79709369f4b&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Add expense via api&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Add expense via api&quot;,
+            &quot;duration&quot;: 12341,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;cy.createExpenseAPI(tFuelExpenses.currDateAPI, 65, 13, 13, false)&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/expenses\n\nThe response we received from your web server was:\n\n  &gt; 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/expenses\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json\&quot;,\n  \&quot;content-length\&quot;: 88\n}\nBody: {\&quot;reportedAt\&quot;:\&quot;2025-11-20\&quot;,\&quot;mileage\&quot;:65,\&quot;liters\&quot;:13,\&quot;totalCost\&quot;:13,\&quot;forceMileage\&quot;:false}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:26 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;content-length\&quot;: \&quot;49\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;31-YhqyoKgd49SnwKFg03W7IyY3Dlo\\\&quot;\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car id is required\&quot;\n}\n\n\nhttps://on.cypress.io/request&quot;,
+              &quot;estack&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/expenses\n\nThe response we received from your web server was:\n\n  &gt; 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/expenses\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json\&quot;,\n  \&quot;content-length\&quot;: 88\n}\nBody: {\&quot;reportedAt\&quot;:\&quot;2025-11-20\&quot;,\&quot;mileage\&quot;:65,\&quot;liters\&quot;:13,\&quot;totalCost\&quot;:13,\&quot;forceMileage\&quot;:false}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:26 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;content-length\&quot;: \&quot;49\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;31-YhqyoKgd49SnwKFg03W7IyY3Dlo\\\&quot;\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car id is required\&quot;\n}\n\n\nhttps://on.cypress.io/request\nat __webpack_modules__&lt;/__WEBPACK_DEFAULT_EXPORT__/request (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:136321:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat _drainQueueStep (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2377:12)\nat _drainQueue (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__&lt;/Async.prototype._drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__&lt;/Async/this.drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at ./cypress/support/commands.js (webpack://aqa-cypress/./cypress/support/commands.js:65:7)\n    at __webpack_modules__&lt;/addCommand/wrap (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:141588:43)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;1199c68f-3737-4a09-96ea-d9c30a761350&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Find car and check expense&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Find car and check expense&quot;,
+            &quot;duration&quot;: 17413,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;const trs = tFuelExpenses.expenseTableTr.first();\ntrs.get(&#x27;td&#x27;).eq(0).should(&#x27;have.text&#x27;, tFuelExpenses.currDateUI);\ntrs.get(&#x27;td&#x27;).eq(1).should(&#x27;have.text&#x27;, 65);\ntrs.get(&#x27;td&#x27;).eq(2).should(&#x27;have.text&#x27;, &#x27;13L&#x27;);\ntrs.get(&#x27;td&#x27;).eq(3).should(&#x27;have.text&#x27;, &#x27;13.00 USD&#x27;);\ncy.visit(&#x27;/panel/garage&#x27;, {\n  timeout: 60000\n});\ncy.wait(5000);\ntGarage.carListUl.get(&#x27;.car_name.h2&#x27;).should(&#x27;have.text&#x27;, \&quot;BMW X5\&quot;);\ntGarage.carListUl.get(&#x27;.car_update-mileage&#x27;).should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.mileageUpdateInput.should(&#x27;have.value&#x27;, 65);&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.table.expenses_table &gt; tbody`, but never found it.&quot;,
+              &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.table.expenses_table &gt; tbody`, but never found it.\n    at get expenseTableTr (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:41:18)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:45:20)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;5cd08f4c-7516-42ac-b206-d1643e57694e&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Edit expense&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Edit expense&quot;,
+            &quot;duration&quot;: 17296,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;tFuelExpenses.editExpense();\ntFuelExpenses.expenseTableTr.first().should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense edited&#x27;);&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-edit`, but never found it.&quot;,
+              &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-edit`, but never found it.\n    at get editExpenseButton (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:53:18)\n    at editExpense (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:75:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:60:22)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;facaed34-7d74-4b89-a7ea-b80cc1995927&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Delete first expense&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Delete first expense&quot;,
+            &quot;duration&quot;: 17359,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;tFuelExpenses.removeExpense();\ncy.wait(1000);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense entry removed&#x27;);&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-delete`, but never found it.&quot;,
+              &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-delete`, but never found it.\n    at get deleteExpenseButton (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:45:18)\n    at removeExpense (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:85:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:66:22)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;691d0291-4ad4-4ac4-8a12-c05d52534095&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Delete second expense&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Delete second expense&quot;,
+            &quot;duration&quot;: 5660,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;tFuelExpenses.removeExpense();\ncy.wait(1000);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense entry removed&#x27;);\ntFuelExpenses.emptyExpensesDiv;&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.car_edit.btn.btn-edit`, but never found it.\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Check fuel expenses options`&quot;,
+              &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.car_edit.btn.btn-edit`, but never found it.\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Check fuel expenses options`\n    at get carEditButton (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:37:18)\n    at removeCar (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:113:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:22:16)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;c283fcbe-1034-439a-8e5d-4c61655c1e40&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          }
+        ],
+        &quot;root&quot;: false,
+        &quot;pending&quot;: [],
+        &quot;_timeout&quot;: 2000,
+        &quot;file&quot;: &quot;&quot;,
+        &quot;uuid&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+        &quot;beforeHooks&quot;: [],
+        &quot;afterHooks&quot;: [],
+        &quot;fullFile&quot;: &quot;&quot;,
+        &quot;passes&quot;: [],
+        &quot;failures&quot;: [
+          {
+            &quot;title&quot;: &quot;Create car and expense&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Create car and expense&quot;,
+            &quot;duration&quot;: 18853,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;cy.visit(&#x27;/panel/garage&#x27;);\ntGarage.addCar();\ncy.visit(expensesPage);\ntFuelExpenses.addExpense();\ntFuelExpenses.expenseTableTr.first().should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense added&#x27;);&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;CypressError: Timed out retrying after 5000ms: `cy.select()` failed because it could not find a single `&lt;option&gt;` with value, index, or text matching: `X5`\n\nhttps://on.cypress.io/select&quot;,
+              &quot;estack&quot;: &quot;CypressError: Timed out retrying after 5000ms: `cy.select()` failed because it could not find a single `&lt;option&gt;` with value, index, or text matching: `X5`\n\nhttps://on.cypress.io/select\nat getOptions (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:115525:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.try (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\nat retryOptions (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:115557:64)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.try (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\nat whenStable (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:147260:62)\nat __webpack_modules__&lt;/create/retry (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:147201:14)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._fulfill (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1615:18)\nat __webpack_modules__&lt;/module.exports/Promise.delay/handle&lt; (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at addCar (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:67:30)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:27:16)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;dc98c829-76e6-40e2-97b5-97ed131972ca&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Check created car&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Check created car&quot;,
+            &quot;duration&quot;: 12435,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;tGarage.checkCreatedCarAPI()&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\n\nThe response we received from your web server was:\n\n  &gt; 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:14 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;transfer-encoding\&quot;: \&quot;chunked\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;2c-khi8OqdMCOMLERZufgII8LfWbC0\\\&quot;\&quot;,\n  \&quot;content-encoding\&quot;: \&quot;gzip\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car not found\&quot;\n}\n\n\nhttps://on.cypress.io/request&quot;,
+              &quot;estack&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\n\nThe response we received from your web server was:\n\n  &gt; 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:14 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;transfer-encoding\&quot;: \&quot;chunked\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;2c-khi8OqdMCOMLERZufgII8LfWbC0\\\&quot;\&quot;,\n  \&quot;content-encoding\&quot;: \&quot;gzip\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car not found\&quot;\n}\n\n\nhttps://on.cypress.io/request\nat __webpack_modules__&lt;/__WEBPACK_DEFAULT_EXPORT__/request (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:136321:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat _drainQueueStep (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2377:12)\nat _drainQueue (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__&lt;/Async.prototype._drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__&lt;/Async/this.drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at checkCreatedCarAPI (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:82:11)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:35:42)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;909f9b35-ddc0-453d-8ea5-a79709369f4b&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Add expense via api&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Add expense via api&quot;,
+            &quot;duration&quot;: 12341,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;cy.createExpenseAPI(tFuelExpenses.currDateAPI, 65, 13, 13, false)&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/expenses\n\nThe response we received from your web server was:\n\n  &gt; 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/expenses\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json\&quot;,\n  \&quot;content-length\&quot;: 88\n}\nBody: {\&quot;reportedAt\&quot;:\&quot;2025-11-20\&quot;,\&quot;mileage\&quot;:65,\&quot;liters\&quot;:13,\&quot;totalCost\&quot;:13,\&quot;forceMileage\&quot;:false}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:26 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;content-length\&quot;: \&quot;49\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;31-YhqyoKgd49SnwKFg03W7IyY3Dlo\\\&quot;\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car id is required\&quot;\n}\n\n\nhttps://on.cypress.io/request&quot;,
+              &quot;estack&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/expenses\n\nThe response we received from your web server was:\n\n  &gt; 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/expenses\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json\&quot;,\n  \&quot;content-length\&quot;: 88\n}\nBody: {\&quot;reportedAt\&quot;:\&quot;2025-11-20\&quot;,\&quot;mileage\&quot;:65,\&quot;liters\&quot;:13,\&quot;totalCost\&quot;:13,\&quot;forceMileage\&quot;:false}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:26 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;content-length\&quot;: \&quot;49\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;31-YhqyoKgd49SnwKFg03W7IyY3Dlo\\\&quot;\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car id is required\&quot;\n}\n\n\nhttps://on.cypress.io/request\nat __webpack_modules__&lt;/__WEBPACK_DEFAULT_EXPORT__/request (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:136321:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat _drainQueueStep (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2377:12)\nat _drainQueue (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__&lt;/Async.prototype._drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__&lt;/Async/this.drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at ./cypress/support/commands.js (webpack://aqa-cypress/./cypress/support/commands.js:65:7)\n    at __webpack_modules__&lt;/addCommand/wrap (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:141588:43)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;1199c68f-3737-4a09-96ea-d9c30a761350&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Find car and check expense&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Find car and check expense&quot;,
+            &quot;duration&quot;: 17413,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;const trs = tFuelExpenses.expenseTableTr.first();\ntrs.get(&#x27;td&#x27;).eq(0).should(&#x27;have.text&#x27;, tFuelExpenses.currDateUI);\ntrs.get(&#x27;td&#x27;).eq(1).should(&#x27;have.text&#x27;, 65);\ntrs.get(&#x27;td&#x27;).eq(2).should(&#x27;have.text&#x27;, &#x27;13L&#x27;);\ntrs.get(&#x27;td&#x27;).eq(3).should(&#x27;have.text&#x27;, &#x27;13.00 USD&#x27;);\ncy.visit(&#x27;/panel/garage&#x27;, {\n  timeout: 60000\n});\ncy.wait(5000);\ntGarage.carListUl.get(&#x27;.car_name.h2&#x27;).should(&#x27;have.text&#x27;, \&quot;BMW X5\&quot;);\ntGarage.carListUl.get(&#x27;.car_update-mileage&#x27;).should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.mileageUpdateInput.should(&#x27;have.value&#x27;, 65);&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.table.expenses_table &gt; tbody`, but never found it.&quot;,
+              &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.table.expenses_table &gt; tbody`, but never found it.\n    at get expenseTableTr (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:41:18)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:45:20)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;5cd08f4c-7516-42ac-b206-d1643e57694e&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Edit expense&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Edit expense&quot;,
+            &quot;duration&quot;: 17296,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;tFuelExpenses.editExpense();\ntFuelExpenses.expenseTableTr.first().should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense edited&#x27;);&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-edit`, but never found it.&quot;,
+              &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-edit`, but never found it.\n    at get editExpenseButton (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:53:18)\n    at editExpense (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:75:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:60:22)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;facaed34-7d74-4b89-a7ea-b80cc1995927&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Delete first expense&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Delete first expense&quot;,
+            &quot;duration&quot;: 17359,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;tFuelExpenses.removeExpense();\ncy.wait(1000);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense entry removed&#x27;);&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-delete`, but never found it.&quot;,
+              &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-delete`, but never found it.\n    at get deleteExpenseButton (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:45:18)\n    at removeExpense (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:85:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:66:22)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;691d0291-4ad4-4ac4-8a12-c05d52534095&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;Delete second expense&quot;,
+            &quot;fullTitle&quot;: &quot;Check fuel expenses options Delete second expense&quot;,
+            &quot;duration&quot;: 5660,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;tFuelExpenses.removeExpense();\ncy.wait(1000);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense entry removed&#x27;);\ntFuelExpenses.emptyExpensesDiv;&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.car_edit.btn.btn-edit`, but never found it.\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Check fuel expenses options`&quot;,
+              &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.car_edit.btn.btn-edit`, but never found it.\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Check fuel expenses options`\n    at get carEditButton (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:37:18)\n    at removeCar (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:113:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:22:16)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;c283fcbe-1034-439a-8e5d-4c61655c1e40&quot;,
+            &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          }
+        ],
+        &quot;skipped&quot;: [],
+        &quot;hasBeforeHooks&quot;: false,
+        &quot;hasAfterHooks&quot;: false,
+        &quot;hasTests&quot;: true,
+        &quot;hasSuites&quot;: false,
+        &quot;totalTests&quot;: 7,
+        &quot;totalPasses&quot;: 0,
+        &quot;totalFailures&quot;: 7,
+        &quot;totalPending&quot;: 0,
+        &quot;totalSkipped&quot;: 0,
+        &quot;hasPasses&quot;: false,
+        &quot;hasFailures&quot;: true,
+        &quot;hasPending&quot;: false,
+        &quot;hasSkipped&quot;: false,
+        &quot;duration&quot;: 101357,
+        &quot;rootEmpty&quot;: false
+      }
+    ],
+    &quot;tests&quot;: [],
+    &quot;root&quot;: true,
+    &quot;pending&quot;: [],
+    &quot;_timeout&quot;: 2000,
+    &quot;file&quot;: &quot;cypress/e2e/qauto/pages/fuelExpenses.cy.js&quot;,
+    &quot;uuid&quot;: &quot;ff6b8ee2-df4d-417b-af92-6aca3fee8187&quot;,
+    &quot;beforeHooks&quot;: [],
+    &quot;afterHooks&quot;: [],
+    &quot;fullFile&quot;: &quot;cypress/e2e/qauto/pages/fuelExpenses.cy.js&quot;,
+    &quot;passes&quot;: [],
+    &quot;failures&quot;: [],
+    &quot;skipped&quot;: [],
+    &quot;hasBeforeHooks&quot;: false,
+    &quot;hasAfterHooks&quot;: false,
+    &quot;hasTests&quot;: false,
+    &quot;hasSuites&quot;: true,
+    &quot;totalTests&quot;: 0,
+    &quot;totalPasses&quot;: 0,
+    &quot;totalFailures&quot;: 0,
+    &quot;totalPending&quot;: 0,
+    &quot;totalSkipped&quot;: 0,
+    &quot;hasPasses&quot;: false,
+    &quot;hasFailures&quot;: false,
+    &quot;hasPending&quot;: false,
+    &quot;hasSkipped&quot;: false,
+    &quot;duration&quot;: 0,
+    &quot;rootEmpty&quot;: true
+  },
+  &quot;allTests&quot;: [
+    {
+      &quot;title&quot;: &quot;Create car and expense&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Create car and expense&quot;,
+      &quot;duration&quot;: 18853,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;cy.visit(&#x27;/panel/garage&#x27;);\ntGarage.addCar();\ncy.visit(expensesPage);\ntFuelExpenses.addExpense();\ntFuelExpenses.expenseTableTr.first().should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense added&#x27;);&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;CypressError: Timed out retrying after 5000ms: `cy.select()` failed because it could not find a single `&lt;option&gt;` with value, index, or text matching: `X5`\n\nhttps://on.cypress.io/select&quot;,
+        &quot;estack&quot;: &quot;CypressError: Timed out retrying after 5000ms: `cy.select()` failed because it could not find a single `&lt;option&gt;` with value, index, or text matching: `X5`\n\nhttps://on.cypress.io/select\nat getOptions (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:115525:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.try (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\nat retryOptions (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:115557:64)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.try (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\nat whenStable (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:147260:62)\nat __webpack_modules__&lt;/create/retry (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:147201:14)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._fulfill (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1615:18)\nat __webpack_modules__&lt;/module.exports/Promise.delay/handle&lt; (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at addCar (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:67:30)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:27:16)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;dc98c829-76e6-40e2-97b5-97ed131972ca&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Check created car&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Check created car&quot;,
+      &quot;duration&quot;: 12435,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;tGarage.checkCreatedCarAPI()&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\n\nThe response we received from your web server was:\n\n  &gt; 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:14 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;transfer-encoding\&quot;: \&quot;chunked\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;2c-khi8OqdMCOMLERZufgII8LfWbC0\\\&quot;\&quot;,\n  \&quot;content-encoding\&quot;: \&quot;gzip\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car not found\&quot;\n}\n\n\nhttps://on.cypress.io/request&quot;,
+        &quot;estack&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\n\nThe response we received from your web server was:\n\n  &gt; 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:14 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;transfer-encoding\&quot;: \&quot;chunked\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;2c-khi8OqdMCOMLERZufgII8LfWbC0\\\&quot;\&quot;,\n  \&quot;content-encoding\&quot;: \&quot;gzip\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car not found\&quot;\n}\n\n\nhttps://on.cypress.io/request\nat __webpack_modules__&lt;/__WEBPACK_DEFAULT_EXPORT__/request (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:136321:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat _drainQueueStep (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2377:12)\nat _drainQueue (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__&lt;/Async.prototype._drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__&lt;/Async/this.drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at checkCreatedCarAPI (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:82:11)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:35:42)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;909f9b35-ddc0-453d-8ea5-a79709369f4b&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Add expense via api&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Add expense via api&quot;,
+      &quot;duration&quot;: 12341,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;cy.createExpenseAPI(tFuelExpenses.currDateAPI, 65, 13, 13, false)&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/expenses\n\nThe response we received from your web server was:\n\n  &gt; 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/expenses\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json\&quot;,\n  \&quot;content-length\&quot;: 88\n}\nBody: {\&quot;reportedAt\&quot;:\&quot;2025-11-20\&quot;,\&quot;mileage\&quot;:65,\&quot;liters\&quot;:13,\&quot;totalCost\&quot;:13,\&quot;forceMileage\&quot;:false}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:26 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;content-length\&quot;: \&quot;49\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;31-YhqyoKgd49SnwKFg03W7IyY3Dlo\\\&quot;\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car id is required\&quot;\n}\n\n\nhttps://on.cypress.io/request&quot;,
+        &quot;estack&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/expenses\n\nThe response we received from your web server was:\n\n  &gt; 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/expenses\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json\&quot;,\n  \&quot;content-length\&quot;: 88\n}\nBody: {\&quot;reportedAt\&quot;:\&quot;2025-11-20\&quot;,\&quot;mileage\&quot;:65,\&quot;liters\&quot;:13,\&quot;totalCost\&quot;:13,\&quot;forceMileage\&quot;:false}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:26 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;content-length\&quot;: \&quot;49\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;31-YhqyoKgd49SnwKFg03W7IyY3Dlo\\\&quot;\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car id is required\&quot;\n}\n\n\nhttps://on.cypress.io/request\nat __webpack_modules__&lt;/__WEBPACK_DEFAULT_EXPORT__/request (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:136321:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat _drainQueueStep (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2377:12)\nat _drainQueue (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__&lt;/Async.prototype._drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__&lt;/Async/this.drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at ./cypress/support/commands.js (webpack://aqa-cypress/./cypress/support/commands.js:65:7)\n    at __webpack_modules__&lt;/addCommand/wrap (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:141588:43)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;1199c68f-3737-4a09-96ea-d9c30a761350&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Find car and check expense&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Find car and check expense&quot;,
+      &quot;duration&quot;: 17413,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;const trs = tFuelExpenses.expenseTableTr.first();\ntrs.get(&#x27;td&#x27;).eq(0).should(&#x27;have.text&#x27;, tFuelExpenses.currDateUI);\ntrs.get(&#x27;td&#x27;).eq(1).should(&#x27;have.text&#x27;, 65);\ntrs.get(&#x27;td&#x27;).eq(2).should(&#x27;have.text&#x27;, &#x27;13L&#x27;);\ntrs.get(&#x27;td&#x27;).eq(3).should(&#x27;have.text&#x27;, &#x27;13.00 USD&#x27;);\ncy.visit(&#x27;/panel/garage&#x27;, {\n  timeout: 60000\n});\ncy.wait(5000);\ntGarage.carListUl.get(&#x27;.car_name.h2&#x27;).should(&#x27;have.text&#x27;, \&quot;BMW X5\&quot;);\ntGarage.carListUl.get(&#x27;.car_update-mileage&#x27;).should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.mileageUpdateInput.should(&#x27;have.value&#x27;, 65);&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.table.expenses_table &gt; tbody`, but never found it.&quot;,
+        &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.table.expenses_table &gt; tbody`, but never found it.\n    at get expenseTableTr (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:41:18)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:45:20)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;5cd08f4c-7516-42ac-b206-d1643e57694e&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Edit expense&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Edit expense&quot;,
+      &quot;duration&quot;: 17296,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;tFuelExpenses.editExpense();\ntFuelExpenses.expenseTableTr.first().should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense edited&#x27;);&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-edit`, but never found it.&quot;,
+        &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-edit`, but never found it.\n    at get editExpenseButton (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:53:18)\n    at editExpense (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:75:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:60:22)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;facaed34-7d74-4b89-a7ea-b80cc1995927&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Delete first expense&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Delete first expense&quot;,
+      &quot;duration&quot;: 17359,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;tFuelExpenses.removeExpense();\ncy.wait(1000);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense entry removed&#x27;);&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-delete`, but never found it.&quot;,
+        &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-delete`, but never found it.\n    at get deleteExpenseButton (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:45:18)\n    at removeExpense (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:85:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:66:22)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;691d0291-4ad4-4ac4-8a12-c05d52534095&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Delete second expense&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Delete second expense&quot;,
+      &quot;duration&quot;: 5660,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;tFuelExpenses.removeExpense();\ncy.wait(1000);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense entry removed&#x27;);\ntFuelExpenses.emptyExpensesDiv;&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.car_edit.btn.btn-edit`, but never found it.\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Check fuel expenses options`&quot;,
+        &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.car_edit.btn.btn-edit`, but never found it.\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Check fuel expenses options`\n    at get carEditButton (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:37:18)\n    at removeCar (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:113:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:22:16)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;c283fcbe-1034-439a-8e5d-4c61655c1e40&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    }
+  ],
+  &quot;allPending&quot;: [],
+  &quot;allPasses&quot;: [],
+  &quot;allFailures&quot;: [
+    {
+      &quot;title&quot;: &quot;Create car and expense&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Create car and expense&quot;,
+      &quot;duration&quot;: 0,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;cy.visit(&#x27;/panel/garage&#x27;);\ntGarage.addCar();\ncy.visit(expensesPage);\ntFuelExpenses.addExpense();\ntFuelExpenses.expenseTableTr.first().should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense added&#x27;);&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;CypressError: Timed out retrying after 5000ms: `cy.select()` failed because it could not find a single `&lt;option&gt;` with value, index, or text matching: `X5`\n\nhttps://on.cypress.io/select&quot;,
+        &quot;estack&quot;: &quot;CypressError: Timed out retrying after 5000ms: `cy.select()` failed because it could not find a single `&lt;option&gt;` with value, index, or text matching: `X5`\n\nhttps://on.cypress.io/select\nat getOptions (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:115525:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.try (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\nat retryOptions (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:115557:64)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.try (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\nat whenStable (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:147260:62)\nat __webpack_modules__&lt;/create/retry (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:147201:14)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._fulfill (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1615:18)\nat __webpack_modules__&lt;/module.exports/Promise.delay/handle&lt; (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at addCar (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:67:30)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:27:16)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;dc98c829-76e6-40e2-97b5-97ed131972ca&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Check created car&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Check created car&quot;,
+      &quot;duration&quot;: 0,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;tGarage.checkCreatedCarAPI()&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\n\nThe response we received from your web server was:\n\n  &gt; 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:14 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;transfer-encoding\&quot;: \&quot;chunked\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;2c-khi8OqdMCOMLERZufgII8LfWbC0\\\&quot;\&quot;,\n  \&quot;content-encoding\&quot;: \&quot;gzip\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car not found\&quot;\n}\n\n\nhttps://on.cypress.io/request&quot;,
+        &quot;estack&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\n\nThe response we received from your web server was:\n\n  &gt; 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/cars/undefined\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo;sid=s%3ABsbpj7QLrsIXsMZvwN1Cq5y6mTIRA2AV.SDdXVIi2LTppvPdf5hvjoyVQPrKF4fOW%2FVRC9Th04mo\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:14 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;transfer-encoding\&quot;: \&quot;chunked\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;2c-khi8OqdMCOMLERZufgII8LfWbC0\\\&quot;\&quot;,\n  \&quot;content-encoding\&quot;: \&quot;gzip\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car not found\&quot;\n}\n\n\nhttps://on.cypress.io/request\nat __webpack_modules__&lt;/__WEBPACK_DEFAULT_EXPORT__/request (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:136321:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat _drainQueueStep (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2377:12)\nat _drainQueue (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__&lt;/Async.prototype._drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__&lt;/Async/this.drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at checkCreatedCarAPI (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:82:11)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:35:42)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;909f9b35-ddc0-453d-8ea5-a79709369f4b&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Add expense via api&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Add expense via api&quot;,
+      &quot;duration&quot;: 0,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;cy.createExpenseAPI(tFuelExpenses.currDateAPI, 65, 13, 13, false)&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/expenses\n\nThe response we received from your web server was:\n\n  &gt; 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/expenses\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json\&quot;,\n  \&quot;content-length\&quot;: 88\n}\nBody: {\&quot;reportedAt\&quot;:\&quot;2025-11-20\&quot;,\&quot;mileage\&quot;:65,\&quot;liters\&quot;:13,\&quot;totalCost\&quot;:13,\&quot;forceMileage\&quot;:false}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:26 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;content-length\&quot;: \&quot;49\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;31-YhqyoKgd49SnwKFg03W7IyY3Dlo\\\&quot;\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car id is required\&quot;\n}\n\n\nhttps://on.cypress.io/request&quot;,
+        &quot;estack&quot;: &quot;CypressError: `cy.request()` failed on:\n\nhttps://guest:welcome2qauto@qauto.forstudy.space/api/expenses\n\nThe response we received from your web server was:\n\n  &gt; 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://guest:welcome2qauto@qauto.forstudy.space/api/expenses\nHeaders: {\n  \&quot;Connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;Cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;user-agent\&quot;: \&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:140.0) Gecko/20100101 Firefox/140.0\&quot;,\n  \&quot;accept\&quot;: \&quot;*/*\&quot;,\n  \&quot;cookie\&quot;: \&quot;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY;sid=s%3AnuTu1PBzBZ3deePw47FBDsYrhx3R4fZz.%2F0m6o7hyYqBj88f4dMjyO8NOSnukZVFfmCheKCaBOIY\&quot;,\n  \&quot;accept-encoding\&quot;: \&quot;gzip, deflate\&quot;,\n  \&quot;authorization\&quot;: \&quot;Basic Z3Vlc3Q6d2VsY29tZTJxYXV0bw==\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json\&quot;,\n  \&quot;content-length\&quot;: 88\n}\nBody: {\&quot;reportedAt\&quot;:\&quot;2025-11-20\&quot;,\&quot;mileage\&quot;:65,\&quot;liters\&quot;:13,\&quot;totalCost\&quot;:13,\&quot;forceMileage\&quot;:false}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \&quot;server\&quot;: \&quot;nginx\&quot;,\n  \&quot;date\&quot;: \&quot;Thu, 20 Nov 2025 07:07:26 GMT\&quot;,\n  \&quot;content-type\&quot;: \&quot;application/json; charset=utf-8\&quot;,\n  \&quot;content-length\&quot;: \&quot;49\&quot;,\n  \&quot;connection\&quot;: \&quot;keep-alive\&quot;,\n  \&quot;x-powered-by\&quot;: \&quot;Express\&quot;,\n  \&quot;vary\&quot;: \&quot;Origin\&quot;,\n  \&quot;access-control-allow-credentials\&quot;: \&quot;true\&quot;,\n  \&quot;etag\&quot;: \&quot;W/\\\&quot;31-YhqyoKgd49SnwKFg03W7IyY3Dlo\\\&quot;\&quot;\n}\nBody: {\n  \&quot;status\&quot;: \&quot;error\&quot;,\n  \&quot;message\&quot;: \&quot;Car id is required\&quot;\n}\n\n\nhttps://on.cypress.io/request\nat __webpack_modules__&lt;/__WEBPACK_DEFAULT_EXPORT__/request (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:136321:72)\nat tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromise0 (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\nat __webpack_modules__&lt;/module.exports/Promise.prototype._settlePromises (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\nat _drainQueueStep (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2377:12)\nat _drainQueue (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2370:24)\nat __webpack_modules__&lt;/Async.prototype._drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2386:16)\nat __webpack_modules__&lt;/Async/this.drainQueues (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at ./cypress/support/commands.js (webpack://aqa-cypress/./cypress/support/commands.js:65:7)\n    at __webpack_modules__&lt;/addCommand/wrap (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:141588:43)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;1199c68f-3737-4a09-96ea-d9c30a761350&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Find car and check expense&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Find car and check expense&quot;,
+      &quot;duration&quot;: 0,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;const trs = tFuelExpenses.expenseTableTr.first();\ntrs.get(&#x27;td&#x27;).eq(0).should(&#x27;have.text&#x27;, tFuelExpenses.currDateUI);\ntrs.get(&#x27;td&#x27;).eq(1).should(&#x27;have.text&#x27;, 65);\ntrs.get(&#x27;td&#x27;).eq(2).should(&#x27;have.text&#x27;, &#x27;13L&#x27;);\ntrs.get(&#x27;td&#x27;).eq(3).should(&#x27;have.text&#x27;, &#x27;13.00 USD&#x27;);\ncy.visit(&#x27;/panel/garage&#x27;, {\n  timeout: 60000\n});\ncy.wait(5000);\ntGarage.carListUl.get(&#x27;.car_name.h2&#x27;).should(&#x27;have.text&#x27;, \&quot;BMW X5\&quot;);\ntGarage.carListUl.get(&#x27;.car_update-mileage&#x27;).should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.mileageUpdateInput.should(&#x27;have.value&#x27;, 65);&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.table.expenses_table &gt; tbody`, but never found it.&quot;,
+        &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.table.expenses_table &gt; tbody`, but never found it.\n    at get expenseTableTr (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:41:18)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:45:20)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;5cd08f4c-7516-42ac-b206-d1643e57694e&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Edit expense&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Edit expense&quot;,
+      &quot;duration&quot;: 0,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;tFuelExpenses.editExpense();\ntFuelExpenses.expenseTableTr.first().should(&#x27;include.text&#x27;, tFuelExpenses.currDateUI);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense edited&#x27;);&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-edit`, but never found it.&quot;,
+        &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-edit`, but never found it.\n    at get editExpenseButton (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:53:18)\n    at editExpense (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:75:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:60:22)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;facaed34-7d74-4b89-a7ea-b80cc1995927&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Delete first expense&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Delete first expense&quot;,
+      &quot;duration&quot;: 0,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;tFuelExpenses.removeExpense();\ncy.wait(1000);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense entry removed&#x27;);&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-delete`, but never found it.&quot;,
+        &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-delete`, but never found it.\n    at get deleteExpenseButton (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:45:18)\n    at removeExpense (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:85:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:66:22)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;691d0291-4ad4-4ac4-8a12-c05d52534095&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;Delete second expense&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options Delete second expense&quot;,
+      &quot;duration&quot;: 0,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;tFuelExpenses.removeExpense();\ncy.wait(1000);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense entry removed&#x27;);\ntFuelExpenses.emptyExpensesDiv;&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-delete`, but never found it.&quot;,
+        &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.btn.btn-delete`, but never found it.\n    at get deleteExpenseButton (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:45:18)\n    at removeExpense (webpack://aqa-cypress/./cypress/support/pageObjects/FuelExpenses.js:85:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:72:22)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;c283fcbe-1034-439a-8e5d-4c61655c1e40&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;\&quot;after all\&quot; hook for \&quot;Delete second expense\&quot;&quot;,
+      &quot;fullTitle&quot;: &quot;Check fuel expenses options \&quot;after all\&quot; hook for \&quot;Delete second expense\&quot;&quot;,
+      &quot;duration&quot;: 0,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;tFuelExpenses.removeExpense();\ncy.wait(1000);\ntGarage.alertDiv.should(&#x27;have.text&#x27;, &#x27;Fuel expense entry removed&#x27;);\ntFuelExpenses.emptyExpensesDiv;&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.car_edit.btn.btn-edit`, but never found it.\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Check fuel expenses options`&quot;,
+        &quot;estack&quot;: &quot;AssertionError: Timed out retrying after 5000ms: Expected to find element: `.car_edit.btn.btn-edit`, but never found it.\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Check fuel expenses options`\n    at get carEditButton (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:37:18)\n    at removeCar (webpack://aqa-cypress/./cypress/support/pageObjects/Garage.js:113:8)\n    at  (webpack://aqa-cypress/./cypress/e2e/qauto/pages/fuelExpenses.cy.js:22:16)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;c283fcbe-1034-439a-8e5d-4c61655c1e40&quot;,
+      &quot;parentUUID&quot;: &quot;c4a4efc0-a36a-433d-a695-79546f75feb5&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    }
+  ],
+  &quot;copyrightYear&quot;: 2025
+}" data-config="{&quot;reportDir&quot;:&quot;cypress/reports/mochawesome&quot;,&quot;reportTitle&quot;:&quot;aqa-cypress&quot;,&quot;reportPageTitle&quot;:&quot;Mochawesome Report&quot;,&quot;inline&quot;:false,&quot;inlineAssets&quot;:false,&quot;charts&quot;:true,&quot;enableCharts&quot;:true,&quot;code&quot;:true,&quot;enableCode&quot;:true,&quot;autoOpen&quot;:false,&quot;overwrite&quot;:false,&quot;timestamp&quot;:false,&quot;ts&quot;:false,&quot;showHooks&quot;:&quot;failed&quot;,&quot;dev&quot;:false,&quot;reportFilename&quot;:&quot;report&quot;,&quot;saveJson&quot;:true,&quot;jsonFile&quot;:&quot;/Users/nikifr/Documents/HTML-JS/AQA/homework/aqa-cypress/cypress/reports/mochawesome/report.json&quot;,&quot;htmlFile&quot;:&quot;/Users/nikifr/Documents/HTML-JS/AQA/homework/aqa-cypress/cypress/reports/mochawesome/report.html&quot;}"><div id="report"></div><script src="assets/app.js"></script></body></html>
