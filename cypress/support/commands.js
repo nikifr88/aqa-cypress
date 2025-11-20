@@ -49,7 +49,7 @@ Cypress.Commands.add('login', (email, pass) => {
 
     cy.get('.modal-footer > .btn.btn-primary').click();
 
-    cy.wait(1000)
+    cy.wait(10000)
     cy.getCookie('sid').then(sid => {
       Cypress.env('sid', sid.value)
     })
